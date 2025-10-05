@@ -12,6 +12,8 @@ body {
   color: #333;
 }
 
+
+
 .sidetext {
   font-size: 18px;
 }
@@ -183,7 +185,6 @@ header {
   color: white;
   font-weight: bold;
   position: relative;
-   background: red !important;
   z-index: 1;
 }
 
@@ -379,6 +380,5 @@ footer {
   transform: scale(1.2); 
 }
 .footer_info { margin-top: 16px; font-size: 14px; }
-
 
 
