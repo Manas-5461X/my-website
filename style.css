@@ -163,17 +163,48 @@ header {
   justify-content: center; 
 }
 
-.pic > img {
-  width: 200px; 
-  height: 200px;
-  background: #aaa;
-  border-radius: 50%;
+.pic {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 16px;
-  transition: box-shadow 0.3s;
-  background-image: cover;
 }
-.pic >img:hover {
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+.mg-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #555; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+
+.mg-circle::before {
+  content: "";
+  position: absolute;
+  top: -10px; 
+  left: -10px;
+  width: 220px; 
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #42e695);
+  z-index: -1;
+  filter: blur(8px);
+  animation: rotate 5s linear infinite;
+}
+
+
+@keyframes rotate {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
 }
 
 .tag {
@@ -347,6 +378,5 @@ footer {
   transform: scale(1.2); 
 }
 .footer_info { margin-top: 16px; font-size: 14px; }
-
 
 
